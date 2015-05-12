@@ -1,0 +1,54 @@
+<template name="#{collection}_list">
+    {{> contentFor region="breadcrumb" template="breadcrumb" data=breadcrumb}}
+
+    {{#contentFor "title"}}
+        #{Collection} List
+    {{/contentFor}}
+
+    {{#contentFor "navbar_buttons"}}
+        {{> filters_button}}
+        <a class="btn btn-primary" href="{{pathFor 'admin_new' collection=collection}}">
+            <i class="fa fa-plus"></i> New
+        </a>
+    {{/contentFor}}
+
+    {{> contentFor region="filters" template="#{collection}_filters"}}
+
+    <table class="admin_list table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each items}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{summary}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>
+
+<template name="#{collection}_filters">
+    {{#filters}}
+        {{#autoForm id="filters" schema=schema doc=doc}}
+            <div class="filters">
+                <div id="filters-cols" class="row">
+                    <div class="col-sm-9">
+                        <div class="form-group">
+                            {{> afQuickField name="text"}}
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 col-actions">
+                        <button type="reset" class="btn btn-link">Reset</button>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+        {{/autoForm}}
+    {{/filters}}
+</template>

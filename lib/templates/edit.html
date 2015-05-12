@@ -1,0 +1,25 @@
+<template name="#{collection}_edit">
+    {{> contentFor region="breadcrumb" template="breadcrumb" data=breadcrumb}}
+
+    {{#contentFor "title"}}
+        Edit #{collection} :
+        <small>{{doc}}</small>
+    {{/contentFor}}
+
+    {{#contentFor "navbar_buttons"}}
+        <a class="btn btn-warning" href="{{pathFor 'admin_list' collection=collection}}{{collectionFilters}}">
+            <i class="fa fa-arrow-left"></i> Back
+        </a>
+    {{/contentFor}}
+
+    {{> quickForm type="update" id="admin_update" collection="#{Collection}" doc=doc}}
+    {{> quickRemoveButton
+        class="btn btn-danger admin_remove"
+        collection="#{Collection}"
+        _id=doc._id
+        onError=onRemoveError
+        onSuccess=onRemoveSuccess
+        beforeRemove=beforeRemove
+    }}
+
+</template>

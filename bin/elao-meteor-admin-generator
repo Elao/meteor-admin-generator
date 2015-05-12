@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var args = process.argv.slice(2);
+
+if (args.length !== 1) {
+    console.error('Only one argument is required : the collection name.');
+    return;
+}
+
+require('../lib/generator.js');

@@ -1,0 +1,15 @@
+<template name="#{collection}_new">
+    {{> contentFor region="breadcrumb" template="breadcrumb" data=breadcrumb}}
+
+    {{#contentFor "title"}}
+        New #{collection}
+    {{/contentFor}}
+
+    {{#contentFor "navbar_buttons"}}
+        <a class="btn btn-warning" href="{{pathFor 'admin_list' collection=collection}}{{collectionFilters}}">
+            <i class="fa fa-arrow-left"></i> Back
+        </a>
+    {{/contentFor}}
+
+    {{> quickForm type="insert" id="admin_insert" collection="#{Collection}"}}
+</template>
