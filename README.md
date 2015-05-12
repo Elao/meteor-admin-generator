@@ -3,18 +3,18 @@
 This is a NodeJs tool package for `elao:meteor-admin` MeteorJs package.
 
 It generate scaffolding for :
-- server admin **Publication**
-- client admin **Template** *(list, edit, new)*
+- server admin **Publications**
+- client admin **Templates** *(list, edit, new)*
 
 ## Installation
 ```sh
-$ git clone https://**
-$ cd **
+$ git clone https://github.com/Elao/meteor-admin-generator.git
+$ cd meteor-admin-generator
 $ npm install -g
 ```
 You can now use `elao-mag` *(for elao-meteor-admin-generator)* command line tool.
 
-## Usage :
+## Usage
 In your MeteorJs project *(`$ cd my-meteor-project`)* :
 ```sh
 $ elao-mag things
