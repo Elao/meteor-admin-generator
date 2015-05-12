@@ -5,6 +5,7 @@ This is a NodeJs tool package for `elao:meteor-admin` MeteorJs package.
 It generate scaffolding for :
 - server admin **Publications**
 - client admin **Templates** *(list, edit, new)*
+- package **Collection** *(SimpleSchema + Collection)*
 
 ## Installation
 ```sh
@@ -26,9 +27,10 @@ Generate scaffolding for : things
 + client/admin/collections/things/edit.js
 + client/admin/collections/things/new.html
 + client/admin/collections/things/new.js
++ packages/collections/collections/schemas/things.js
++ packages/collections/collections/things.js
 ... done !
-
 ```
-This command generate **Publications** and **Templates** for **things**.
+This command generate **Schema**, **Collection**, **Publications** and **Templates** for **things**.
 
 **You can now edit this files at your convenience.**
