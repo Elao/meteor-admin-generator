@@ -8,6 +8,12 @@ It generate scaffolding for :
 - package **Collection** *(SimpleSchema + Collection)*
 
 ## Installation
+- from NPM 
+```
+$ npm install elao-meteor-admin-generator -g
+```
+
+- from Github
 ```sh
 $ git clone https://github.com/Elao/meteor-admin-generator.git
 $ cd meteor-admin-generator
